@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CAT 1 Practice Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="overrides.css" />
+  <link rel="stylesheet" href="practice-answer.css" />
+</head>
+<body>
+  <div class="glow glow-one"></div><div class="glow glow-two"></div>
+  <main class="shell">
+    <header><a class="brand" href="#"><span class="brand-mark">C</span><span>CAT<span>·</span>LAB</span></a><div class="header-actions"><span class="status-dot"></span><span class="muted">Practice mode</span><button class="icon-btn" id="theme" aria-label="Toggle theme">◐</button></div></header>
+    <section class="hero"><div><p class="eyebrow">CAT 1 • REVISION ARENA</p><h1>Make every<br><em>attempt</em> count.</h1><p class="lede">A focused drill space for Java, algorithms and problem-solving fundamentals.</p></div><div class="hero-meter"><div class="ring"><strong id="accuracy">—</strong><span>accuracy</span></div><p><b id="answeredHero">0</b> answers checked<br><span>keep your streak alive</span></p></div></section>
+    <section class="topics" id="topics"></section>
+    <section class="mode-switch" aria-label="Assessment mode"><button class="mode active" data-mode="practice"><b>Practice</b><span>Instant answers</span></button><button class="mode" data-mode="test"><b>Full test</b><span>151 questions · review at end</span></button><button class="mode" data-mode="mock"><b>Mock assessment</b><span>50 random · 60 minutes</span></button></section>
+    <section class="workspace">
+      <aside class="rail"><div class="timer"><span>SESSION TIMER</span><strong id="clock">15:00</strong></div><div class="rail-rule"></div><p class="rail-label">QUESTION MAP</p><div class="question-map" id="questionMap"></div><button class="text-btn" id="reset">↻ Reset session</button></aside>
+      <section class="quiz-card" id="quizCard"><div class="quiz-top"><span class="pill" id="topicLabel">Java Foundations</span><span class="q-count" id="qCount">01 / 20</span></div><div class="progress"><i id="progress"></i></div><p class="question-number" id="questionNumber">QUESTION 01</p><h2 id="question">Loading question…</h2><div class="answers" id="answers"></div><div class="quiz-bottom"><button class="secondary" id="skip">Skip for now</button><button class="primary" id="next" disabled>Check answer <span>→</span></button></div></section>
+      <aside class="insights"><p class="rail-label">LIVE PULSE</p><div class="stat"><span>Correct</span><strong id="correct">00</strong></div><div class="stat"><span>To review</span><strong id="review">00</strong></div><div class="tip"><span>✦ QUICK TIP</span><p id="tip">Answer the easy questions first. Momentum is a strategy.</p></div></aside>
+    </section>
+  </main>
+  <dialog id="summary"><div class="summary-icon">✦</div><p class="eyebrow">SESSION COMPLETE</p><h2>Solid work.</h2><p id="summaryText"></p><div class="summary-score" id="summaryScore"></div><button class="primary" id="restart">Try another round <span>→</span></button></dialog>
+  <script src="questions.js"></script>
+  <script>document.getElementById('clock').textContent='60:00'</script>
+  <script src="app.js"></script>
+</body>
+</html>
